@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Mpu Purwa</title>
+    <style>
+
+        * {margin: 0;
+            padding: 0;
+            box-sizing: border-box;}
+
+        body {font-family: Georgia, serif;
+            background-color: #f7f0e5;
+            color: #2d1c12;}
+
+        header { background-color: #fffaf2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #e6d8c5;}
+        .logo h1 { font-size: 25px;
+            color: #4c2b19; }
+        .logo p {font-size: 11px;
+            letter-spacing: 2px;
+            color: #8a6548;}
+        nav {display: flex;
+            gap: 35px;}
+        nav a {text-decoration: none;
+            color: #2d1c12;
+            font-family: Arial, sans-serif;
+            font-size: 15px;}
+        nav a:hover {color: #a84e28;}
+        .hero {min-height: 590px;
+            background:
+                linear-gradient(to right,
+                    rgba(250, 241, 225, 0.94),
+                    rgba(250, 241, 225, 0.65),
+                    rgba(40, 20, 10, 0.15)),
+                url("museum-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 70px 10%;}
+        .hero-content {max-width: 620px; }
+        .welcome {letter-spacing: 7px;
+            font-size: 13px;
+            color: #8a6548;
+            margin-bottom: 15px;}
+        .hero h2 {font-size: 72px;
+            line-height: 0.95;
+            margin-bottom: 25px;
+            color: #21130c; }
+        .hero-description {font-size: 23px;
+            line-height: 1.4;
+            margin-bottom: 30px;}
+        .btn {display: inline-block;
+            background-color: #a34825;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 7px;
+            font-family: Arial, sans-serif;}
+        .btn:hover {background-color: #76331b;}
+        .keunggulan {margin-top: 45px;
+            display: flex;
+            gap: 35px;
+            font-family: Arial, sans-serif;}
+        .keunggulan div {display: flex;
+            align-items: center; gap: 10px;}
+        .keunggulan span {font-size: 27px; }
+        .keunggulan p {font-size: 13px;}
+        .koleksi {padding: 70px 8%;}
+        .judul-section {text-align: center; margin-bottom: 45px;}
+        .judul-section h2 {
+            font-size: 45px;
+            margin-bottom: 10px;}
+        .judul-section p {
+            font-family: Arial, sans-serif;
+            color: #755d4b;}
+        .koleksi-grid {display: grid;
+            grid-template-columns:repeat(3, 1fr);gap: 25px;}
+        .koleksi-card {background-color: #fffaf3;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow:0 5px 18pxrgba(70, 40, 20, 0.12);
+            text-decoration: none;
+            color: #2d1c12;
+            transition: 0.3s;}
+        .koleksi-card:hover {transform: translateY(-6px);}
+        .koleksi-card img { width: 100%;height: 430px;object-fit: 
+            contain;background-color: white;}
+        .koleksi-info {padding: 22px; }
+        .koleksi-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;}
+        .koleksi-info p {font-family: Arial, sans-serif;font-size: 14px;
+            line-height: 1.6;color: #715e50;}
+        .pengunjung 
+            {margin: 0 8% 70px;
+            padding: 45px;
+            background-color: #ede4d8;
+            border-radius: 17px;}
+        .pengunjung h2 
+            {text-align: center;
+            font-size: 35px;
+            margin-bottom: 35px; }
+        .pengunjung-grid 
+            {display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;}
+        .pengunjung-grid h3 
+            {color: #8c431f;
+            margin-bottom: 10px;}
+        .pengunjung-grid p 
+            {font-family: Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 14px; }
+        footer 
+            {background-color: #3a2115;
+            color: #f4e7d5;
+            padding: 35px 8% 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;}
+        footer h3 
+            {font-size: 22px;}
+        footer p 
+            {font-family: Arial, sans-serif;
+            font-size: 13px;
+            margin-top: 8px;}
+        @media(max-width: 900px) 
+            {nav {display: none;}
+            .hero h2 {font-size: 55px;}
+            .koleksi-grid {grid-template-columns: 1fr;}
+            .pengunjung-grid {grid-template-columns: 1fr;}
+            .keunggulan {flex-direction: column;}}
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>MUSEUM MPU PURWA</h1>
+        <p>WARISAN MASA LALU</p>
+    </div>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#tentang">
+            Tentang
+        </a>
+        <a href="#koleksi">
+            Koleksi
+        </a>
+        <a href="#kunjungan">
+            Kunjungan
+        </a>
+    </nav>
+</header>
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="welcome">
+                SELAMAT DATANG DI
+            </p>
+            <h2>
+                Museum<br>
+                Mpu Purwa
+            </h2>
+            <p class="hero-description">
+                Menjelajahi jejak sejarah dan
+                warisan budaya Malang.
+            </p>
+            <a href="#koleksi"
+               class="btn">
+                Lihat Koleksi →
+            </a>
+            <div class="keunggulan">
+                <div>
+                    <span>◉</span>
+                    <p>
+                        Melestarikan<br>
+                        Warisan Budaya
+                    </p>
+                </div>
+                <div>
+                    <span>♙</span>
+                    <p>
+                        Mengenalkan Sejarah<br>
+                        kepada Masyarakat
+                    </p>
+                </div>
+                <div>
+                    <span>▤</span>
+                    <p>
+                        Menyediakan<br>
+                        Informasi Digital
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pengunjung" id="tentang">
+        <h2>Tentang Museum</h2>
+        <div class="pengunjung-grid">
+            <div>
+                <h3>◍ Sejarah</h3>
+                <p>Museum Mpu Purwa didirikan untuk mengabadikan jejak budaya dan sejarah yang tumbuh di kawasan Malang.</p>
+            </div>
+            <div>
+                <h3>✦ Misi</h3>
+                <p>Mengembangkan edukasi sejarah, melestarikan warisan budaya, serta memperkenalkan koleksi berharga kepada masyarakat.</p>
+            </div>
+            <div>
+                <h3>☼ Nilai</h3>
+                <p>Menjaga dan menyampaikan warisan masa lalu agar tetap hidup dalam pemahaman dan semangat generasi masa kini.</p>
+            </div>
+        </div>
+    </section>
+    <!-- KOLEKSI -->
+    <section class="koleksi"
+             id="koleksi">
+        <div class="judul-section">
+            <h2>
+                Koleksi Unggulan
+            </h2>
+            <p>
+                Temukan berbagai peninggalan
+                bersejarah Museum Mpu Purwa
+            </p>
+        </div>
+        <div class="koleksi-grid">
+            <a href="#" class="koleksi-card">
+                <img src="muncang.jpg" alt="Prasasti Muncang">
+                <div class="koleksi-info">
+                    <h3>Muncang</h3>
+                    <p>
+                        Salah satu koleksi prasasti
+                        yang menyimpan informasi
+                        mengenai sejarah masa lampau.
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="koleksi-card">
+                <img src="ganesya.jpg" alt="Ganesya">
+                <div class="koleksi-info">
+                    <h3>Ganesya</h3>
+                    <p>
+                        Salah satu koleksi arca
+                        bersejarah yang terdapat
+                        di Museum Mpu Purwa.
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="koleksi-card">
+                <img src="siwa mahaguru.jpg" alt="Siwa Mahaguru">
+                <div class="koleksi-info">
+                    <h3>Siwa Mahaguru</h3>
+                    <p>
+                        Koleksi yang berkaitan
+                        dengan perkembangan
+                        kebudayaan Hindu-Buddha.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- INFORMASI PENGUNJUNG -->
+    <section class="pengunjung"
+             id="kunjungan">
+        <h2>
+            Informasi Pengunjung
+        </h2>
+        <div class="pengunjung-grid">
+            <div>
+                <h3>
+                    ◷ Jadwal operasional
+                </h3>
+                <p>
+                    SENIN-KAMIS 08.00-16.00 WIB
+                    JUMAT 08.30-15.00 WIB
+                    SABTU,MINGGU,HARI LIBUR NASIONAL DAN CUTI BERSAMA (TUTUP)
+                </p>
+            </div>
+            <div>
+                <h3>
+                    ⌖ Lokasi
+                </h3>
+                <p>
+                    Jl. Soekarno Hatta,
+                    Mojolangu, Lowokwaru,
+                    Kota Malang.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    ⓘ Informasi
+                </h3>
+                <p>
+                    Informasi mengenai museum
+                    dan layanan kunjungan.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div>
+        <h3>
+            Museum Mpu Purwa
+        </h3>
+        <p>
+            Warisan sejarah dan budaya Malang
+        </p>
+    </div>
+    <p>
+        &copy; 250911722743
+        Nur Alya Kaila Qoi Sara
+    </p>
+</footer>
+</body>
+</html>
